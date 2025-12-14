@@ -62,7 +62,7 @@ function Categories() {
     );
   }
   function deleteCategory(category) {
-    swal
+    Swal
       .fire({
         title: "Are you sure?",
         text: `Do you want to delete ${category.name}?`,
