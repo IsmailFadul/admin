@@ -1,9 +1,10 @@
 import Layout from "@/components/layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { withSwal } from "react-sweetalert2";
+import Swal from "sweetalert2";
 
-function Categories({ swal }) {
+
+function Categories() {
   const [editedCategory, setEditedCategory] = useState(null);
   const [name, setName] = useState("");
   const [parentCategory, setParentCategory] = useState("");
@@ -21,7 +22,7 @@ function Categories({ swal }) {
     ev.preventDefault();
     // Prevent an empty category name
     if (!name.trim()) {
-      await swal.fire({
+      await Swal.fire({
         title: "Oops...",
         text: "Category name cannot be empty.",
         icon: "warning",
@@ -228,4 +229,4 @@ function Categories({ swal }) {
   );
 }
 
-export default withSwal(({ swal }, ref) => <Categories swal={swal} />);
+export default Categories;
