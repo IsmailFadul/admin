@@ -5,7 +5,7 @@ import Logo from "@/components/logo"
 
 export default function Nav({show}) {
   const inactiveLink = "flex gap-2 p-1 ";
-  const activeLink = inactiveLink + " bg-hiahlight text-black rounded-lg";
+  const activeLink = inactiveLink + " bg-highlight text-black rounded-lg";
 
   const inactiveIcon = "w-7 h-7";
   const activeIcon = inactiveIcon + "text-blue";

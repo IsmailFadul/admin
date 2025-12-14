@@ -129,7 +129,7 @@ function Categories() {
             <option value="0">No parent category</option>
             {categories.length > 0 &&
               categories.map((Category) => (
-                <option value={Category._id}>{Category.name}</option>
+                <option key={Category._id}value={Category._id}>{Category.name}</option>
               ))}
           </select>
         </div>
@@ -143,7 +143,7 @@ function Categories() {
           </button>
           {properties.length > 0 &&
             properties.map((property, index) => (
-              <div className="flex gap-1 mb-2">
+              <div key={index}className="flex gap-1 mb-2">
                 <input
                   className="mb-0"
                   type="text"
@@ -203,7 +203,7 @@ function Categories() {
           <tbody>
             {categories.length > 0 &&
               categories.map((category) => (
-                <tr>
+                <tr key={category._id}>
                   <td>{category.name}</td>
                   <td>{category?.parent?.name}</td>
                   <td>

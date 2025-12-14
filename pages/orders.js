@@ -24,7 +24,7 @@ export default function OrdersPage() {
                 </thead>
                 {orders.length > 0 &&
                     orders?.map((order) => (
-                        <tbody>
+                        <tbody key={order._id}>
                             <tr>
                                 <td>
                                     <td>
@@ -33,17 +33,17 @@ export default function OrdersPage() {
 
                                 </td>
                                 <td>
-                                    {order.name} //{order.email}
+                                    {order.name} {order.email}
                                     <br />
                                     {order.city} {order.streetAddress}
                                     {order.address}
                                 </td>
                                 <td>
                                     {order.line_items?.map((l) => (
-                                        <>
+                                        <div key={index}>
                                             {l.price_data.product_data?.name} *{l.quantity}
                                             <br />
-                                        </>
+                                        </div>
                                     ))}
                                 </td>
                             </tr>
