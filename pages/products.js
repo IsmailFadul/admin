@@ -12,6 +12,7 @@ export default function Products() {
   }, []);
   return (
     <Layout>
+      <h1>Product</h1>
       <Link className="btn-primary" href={"/products/new"}>
         Add new products
       </Link>
